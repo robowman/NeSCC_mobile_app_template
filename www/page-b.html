@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<title>Northeast State Community College</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/jqm-demos.css">
+	<link rel="stylesheet" href="css/NeSCC.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<script src="js/jquery.js"></script>
+	<script src="js/_assets/index.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script>
+		$(function() {
+			$( "[data-role='navbar']" ).navbar();
+			$( "[data-role='header'], [data-role='footer']" ).toolbar();
+		});
+		// Update the contents of the toolbars
+		$( document ).on( "pagecontainerchange", function() {
+			// Each of the four pages in this demo has a data-title attribute
+			// which value is equal to the text of the nav button
+			// For example, on first page: <div data-role="page" data-title="Info">
+			var current = $( ".ui-page-active" ).jqmData( "title" );
+			// Change the heading
+			$( "[data-role='header'] h1" ).text( current );
+			// Remove active class from nav buttons
+			$( "[data-role='navbar'] a.ui-btn-active" ).removeClass( "ui-btn-active" );
+			// Add active class to current nav button
+			$( "[data-role='navbar'] a" ).each(function() {
+				if ( $( this ).text() === current ) {
+					$( this ).addClass( "ui-btn-active" );
+				}
+			});
+		});
+	</script>
+	</head>
+	<body>
+     <div data-role="header" data-position="fixed" data-theme="a">
+		<a href="../toolbar/" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
+        <h1>Friends</h1>
+    </div><!-- /header -->
+
+	<div data-role="page" data-title="Friends">
+
+	    <div class="ui-content" role="main">
+
+				<ul data-role="listview" data-theme="a" data-dividertheme="e" data-filter="true" data-filter-theme="a" data-filter-placeholder="Search friends...">
+					
+					<li data-role="list-divider">B</li>
+					<li><a href="#">Russell Bowman</a></li>
+					<li data-role="list-divider">F</li>
+                    <li><a href="#">Chris Fenton</a></li>
+					<li data-role="list-divider">M</li>
+					<li><a href="#">Jonathan Moore</a></li>
+				</ul>
+
+		</div><!-- /content -->
+
+	</div><!-- /page -->
+
+	<div data-role="footer" data-position="fixed" data-theme="a">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="index.html" data-prefetch="true" data-transition="fade">Info</a></li>
+				<li><a href="page-b.html" data-prefetch="true" data-transition="flip">Friends</a></li>
+				<li><a href="page-c.html" data-prefetch="true" data-transition="turn">Albums</a></li>
+				<li><a href="page-d.html" data-prefetch="true" data-transition="slide">Emails</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+    <script type="text/javascript" src="cordova.js"></script> 
+    <script type="text/javascript" src="js/index.js"></script> 
+    <script type="text/javascript">
+            app.initialize();
+        </script>
+</body>
+</html>
