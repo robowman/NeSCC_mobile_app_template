@@ -133,11 +133,11 @@
   <allow-intent href="mailto:*" />
   <allow-intent href="geo:*" />
   <platform name="android">
-  <preference name="phonegap-version" value="5.2.0" />
+  <preference name="phonegap-version" value="4.0.2" />
   <preference name="orientation" value="landscape" />
 </platform>
   <platform name="ios">
-    <preference name="phonegap-version" value="5.2.0" />
+    <preference name="phonegap-version" value="3.9.1" />
     <preference name="orientation" value="portrait" />
   </platform>
 </widget>
