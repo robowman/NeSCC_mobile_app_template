@@ -59,22 +59,7 @@
 			});
 		});
 	</script>
-    
-    <script type="text/javascript">
-
- $(document).ready(function () {
-
-           var html = '';
-		   $.getJSON('http://apps.northeaststate.edu/webservices/faculty_staff_directory/index.php?callback=?&format=json', function (result) {
-               $.each(result, function (i, post) {
-                   html += '<li><a href="#">' + post.name + '</a></li>'; 
-                   
-               });
-                $('#faculty_staff_directory').append(html);
-           });
-
-       });  
-</script>
+  
 	</head>
 	<body>
 <div data-role="header" data-position="fixed" data-theme="a"> <a href="../toolbar/" data-rel="back" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-carat-l">Back</a>
@@ -112,7 +97,22 @@
       <!-- /navbar --> 
     </div>
 <!-- /footer --> 
+  
+    <script type="text/javascript">
 
+ $(document).ready(function () {
+
+           var html = '';
+		   $.getJSON('http://apps.northeaststate.edu/webservices/faculty_staff_directory/index.php?callback=?&format=json', function (result) {
+               $.each(result, function (i, post) {
+                   html += '<li><a href="#">' + post.name + '</a></li>'; 
+                   
+               });
+                $('#faculty_staff_directory').append(html);
+           });
+
+       });  
+</script>
 <script type="text/javascript" src="cordova.js"></script> 
 <script type="text/javascript" src="js/index.js"></script> 
 <script type="text/javascript">
