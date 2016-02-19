@@ -68,7 +68,7 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" /> -->
 	
-    <plugin name="cordova-plugin-whitelist" spec="1.2.1" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="1.2.1" />
 	<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.2.0" />
 
 
