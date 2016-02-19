@@ -49,18 +49,18 @@
     -->
     <!-- Plugins -->
 
-    <!-- Core plugins 
+    <!-- Core plugins  -->
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.console" /> -->
-    <!-- <gap:plugin name="org.apache.cordova.contacts" /> Removed 2-19-16 unsupported by build phonegap -->
-    <!-- <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.console" /> 
+   <gap:plugin name="org.apache.cordova.contacts" /> 
+     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.device-motion" />
     <gap:plugin name="org.apache.cordova.device-orientation" />
     <gap:plugin name="org.apache.cordova.dialogs" /> -->
-   <!--  <gap:plugin name="org.apache.cordova.file" /> Removed 2-19-16 because of dependency conflict -->
-   <!-- <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
     <gap:plugin name="org.apache.cordova.geolocation" />
     <gap:plugin name="org.apache.cordova.globalization" />
     <gap:plugin name="org.apache.cordova.media" />
@@ -68,11 +68,8 @@
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" /> 
 	
-    <plugin name="cordova-plugin-whitelist" source="npm" spec="1.2.1" />
-	<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.2.0" />-->
-	<plugin name="cordova-plugin-whitelist" spec="n/a" />
-<plugin name="cordova-plugin-whitelist" spec="n/a" />
-<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="n/a" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="1.2.1" /> 
+	<plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.2.0" />
 
 
     <!-- Third party plugins -->
